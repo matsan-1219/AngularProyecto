@@ -1,0 +1,25 @@
+<h2>Products</h2>
+nombre de la lista
+
+
+<div *ngFor="let product of products">
+    ngfor presenta una lista de productos
+    Dentro de div, agregue una h3 en donde ira el titulo del producto   {{ product.name }}. 
+
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a> 
+  </h3>
+  
+
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+
+  <button (click)="share()">
+    Share
+  </button>
+  creacion de botones
+
+</div>
